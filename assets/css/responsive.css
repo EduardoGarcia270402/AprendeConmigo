@@ -1,0 +1,157 @@
+﻿@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(-12px);
+  }
+  70% {
+    transform: translateX(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 780px) {
+  .topbar {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .brand > span:last-child,
+  .icon-button span:last-child {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .module-grid,
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module-heading {
+    align-items: flex-start;
+  }
+
+  .module-heading-icon {
+    flex-basis: 82px;
+    height: 82px;
+    font-size: 2.5rem;
+  }
+
+  .activity-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .progress-box {
+    flex-basis: auto;
+  }
+
+  .instruction-panel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .choice-grid,
+  .shape-choice-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .visual-choice {
+    min-height: 180px;
+  }
+
+  .memory-grid {
+    gap: 16px;
+  }
+
+  .memory-card {
+    min-height: 145px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    width: min(100% - 22px, 1120px);
+  }
+
+  .hero,
+  .module-card,
+  .activity-card {
+    border-width: 3px;
+  }
+
+  .module-card {
+    grid-template-columns: auto 1fr;
+    padding: 20px;
+  }
+
+  .module-icon {
+    width: 66px;
+    height: 66px;
+    font-size: 2rem;
+  }
+
+  .card-arrow {
+    display: none;
+  }
+
+  .activity-illustration {
+    height: 180px;
+  }
+
+  .visual-choice {
+    min-height: 150px;
+    padding: 14px;
+  }
+
+  .shape {
+    width: 76px;
+    height: 76px;
+  }
+
+  .shape-triangle {
+    width: 0;
+    height: 0;
+    border-width: 44px;
+    border-bottom-width: 76px;
+  }
+
+  .shape-rectangle {
+    width: 100px;
+    height: 65px;
+  }
+
+  .motor-color-button {
+    min-height: 140px;
+  }
+
+  .memory-card {
+    min-height: 115px;
+  }
+
+  .card-front {
+    font-size: 3.6rem;
+  }
+
+  .button-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
