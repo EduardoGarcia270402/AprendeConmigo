@@ -1,7 +1,7 @@
 let currentText = "";
 let pendingSpeech = null;
 
-export function speak(text, { remember = true } = {}) {
+export function speak(text, { remember = true, volume = 1 } = {}) {
   if (remember) currentText = text;
   if (!("speechSynthesis" in window)) return;
 
@@ -10,6 +10,7 @@ export function speak(text, { remember = true } = {}) {
   utterance.lang = "es-ES";
   utterance.rate = 0.85;
   utterance.pitch = 1.1;
+  utterance.volume = volume;
   window.speechSynthesis.speak(utterance);
 }
 

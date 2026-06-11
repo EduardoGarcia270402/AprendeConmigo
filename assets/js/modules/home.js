@@ -33,6 +33,15 @@ export function renderHome() {
         </span>
         <span class="card-arrow" aria-hidden="true">→</span>
       </button>
+      <button class="module-card tea-card" data-nav="/tea">
+        <span class="module-icon" aria-hidden="true">CAA</span>
+        <span>
+          <small>Comunicación y calma</small>
+          <strong>TEA nivel 2</strong>
+          <span>Pictogramas y respiración guiada</span>
+        </span>
+        <span class="card-arrow" aria-hidden="true">→</span>
+      </button>
     </section>
     <p class="privacy-note">Tu progreso se guarda únicamente en este dispositivo.</p>`,
     { backTo: "/", showHome: false },

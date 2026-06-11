@@ -12,9 +12,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *:not(.breathing-circle),
+  *:not(.breathing-circle)::before,
+  *:not(.breathing-circle)::after {
     scroll-behavior: auto !important;
     transition: none !important;
     animation: none !important;

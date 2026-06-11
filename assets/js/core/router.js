@@ -1,6 +1,7 @@
 import { stopSpeech } from "./speech.js";
 
 const routes = new Map();
+let cleanupCurrentRoute = null;
 export function registerRoute(path, renderer) {
   routes.set(path, renderer);
 }
@@ -18,10 +19,13 @@ export function getRoute() {
 }
 
 export function renderCurrentRoute() {
+  cleanupCurrentRoute?.();
+  cleanupCurrentRoute = null;
   stopSpeech();
   const path = getRoute();
   const renderer = routes.get(path) || routes.get("/not-found");
-  renderer?.();
+  const cleanup = renderer?.();
+  if (typeof cleanup === "function") cleanupCurrentRoute = cleanup;
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 

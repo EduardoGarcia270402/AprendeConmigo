@@ -66,7 +66,7 @@
 .module-grid,
 .activity-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
   gap: 28px;
   margin-top: 36px;
 }
@@ -107,6 +107,15 @@
 
 .motor-card {
   background: #bdeedc;
+}
+
+.tea-card {
+  background: #ded9c8;
+}
+
+.tea-card .module-icon {
+  font-size: 1.45rem;
+  letter-spacing: 0.04em;
 }
 
 .module-icon {

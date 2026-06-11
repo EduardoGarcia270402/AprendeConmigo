@@ -46,6 +46,14 @@ body[data-theme="motor"] {
   --accent: #ffb800;
 }
 
+body[data-theme="tea"] {
+  --background: #f5f2e9;
+  --primary: #4f6f68;
+  --primary-dark: #294a44;
+  --accent: #d8b86a;
+  --muted: #52615e;
+}
+
 button,
 a {
   font: inherit;
