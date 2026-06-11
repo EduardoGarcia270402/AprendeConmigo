@@ -1,15 +1,15 @@
-import { registerRoute, startRouter } from "./core/router.js";
-import { renderHome, renderNotFound } from "./modules/home.js";
-import { renderVisionColors } from "./modules/low-vision/colors.js";
-import { renderLowVisionMenu } from "./modules/low-vision/menu.js";
-import { renderVisionShapes } from "./modules/low-vision/shapes.js";
-import { renderMotorColors } from "./modules/motor/colors.js";
-import { renderMotorMemory } from "./modules/motor/memory.js";
-import { renderMotorMenu } from "./modules/motor/menu.js";
-import { renderTeaBreathing } from "./modules/tea/breathing.js";
-import { renderTeaCommunicator } from "./modules/tea/communicator.js";
-import { renderTeaMenu } from "./modules/tea/menu.js";
-import { renderTeaSettings } from "./modules/tea/settings.js";
+import { registerRoute, startRouter } from "./core/router.js?v=3";
+import { renderHome, renderNotFound } from "./modules/home.js?v=3";
+import { renderVisionColors } from "./modules/low-vision/colors.js?v=3";
+import { renderLowVisionMenu } from "./modules/low-vision/menu.js?v=3";
+import { renderVisionShapes } from "./modules/low-vision/shapes.js?v=3";
+import { renderMotorColors } from "./modules/motor/colors.js?v=3";
+import { renderMotorMemory } from "./modules/motor/memory.js?v=3";
+import { renderMotorMenu } from "./modules/motor/menu.js?v=3";
+import { renderTeaBreathing } from "./modules/tea/breathing.js?v=3";
+import { renderTeaCommunicator } from "./modules/tea/communicator.js?v=3";
+import { renderTeaMenu } from "./modules/tea/menu.js?v=3";
+import { renderTeaSettings } from "./modules/tea/settings.js?v=3";
 
 registerRoute("/", renderHome);
 registerRoute("/baja-vision", renderLowVisionMenu);
