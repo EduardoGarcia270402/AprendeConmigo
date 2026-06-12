@@ -1,0 +1,160 @@
+.route-story {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 5vw, 54px);
+  min-height: 170px;
+  margin: 34px auto 0;
+  padding: 20px;
+  border: 3px solid #9bc9ba;
+  border-radius: 28px;
+  background: #fff;
+}
+
+.lucas-character {
+  width: 135px;
+  height: 135px;
+}
+
+.route-story-arrow {
+  color: var(--primary-dark);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 900;
+}
+
+.destination-sign {
+  display: grid;
+  place-items: center;
+  min-width: 160px;
+  text-transform: capitalize;
+}
+
+.destination-icon {
+  width: 110px;
+  height: 110px;
+}
+
+.destination-sign strong {
+  font-size: 1.35rem;
+}
+
+.route-prompt {
+  margin: 34px 0 18px;
+  text-align: center;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.route-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 24px;
+}
+
+.route-card {
+  min-height: 260px;
+  overflow: hidden;
+  padding: 0 0 20px;
+  border: 4px solid var(--ink);
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 8px 0 var(--ink);
+  cursor: pointer;
+}
+
+.route-card-scene {
+  position: relative;
+  display: block;
+  height: 190px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: linear-gradient(#bde8ef 0 55%, #9bcf82 55% 65%, #e8d4ad 65%);
+}
+
+.route-path {
+  position: absolute;
+  right: 16%;
+  bottom: 0;
+  left: 16%;
+  height: 70px;
+  background: #e8e1d2;
+  clip-path: polygon(38% 0, 62% 0, 100% 100%, 0 100%);
+}
+
+.route-lucas,
+.route-signal,
+.route-badge,
+.route-destination {
+  position: absolute;
+  z-index: 2;
+}
+
+.route-lucas {
+  bottom: 7px;
+  left: 8px;
+  width: 82px;
+  height: 82px;
+  transition: transform 1s ease-in-out;
+}
+
+.route-signal {
+  bottom: 28px;
+  left: 42%;
+  width: 82px;
+  height: 82px;
+  transform: translateX(-50%);
+}
+
+.route-badge {
+  top: 8px;
+  left: 53%;
+  width: 54px;
+  height: 54px;
+}
+
+.route-destination {
+  right: 6px;
+  bottom: 45px;
+  width: 72px;
+  height: 72px;
+}
+
+.route-card strong {
+  display: block;
+  padding: 0 14px;
+  font-size: 1.1rem;
+}
+
+.route-card.is-arriving {
+  outline: 8px solid var(--success);
+}
+
+.route-card.is-arriving .route-lucas {
+  transform: translateX(calc(100% + 100px)) scale(0.72);
+}
+
+.route-card.is-arriving .route-destination {
+  animation: destination-celebrate 600ms ease 500ms both;
+}
+
+@keyframes destination-celebrate {
+  50% {
+    transform: scale(1.22) rotate(5deg);
+  }
+}
+
+@media (max-width: 560px) {
+  .route-story {
+    gap: 10px;
+  }
+
+  .lucas-character,
+  .destination-icon {
+    width: 88px;
+    height: 88px;
+  }
+
+  .destination-sign {
+    min-width: 100px;
+  }
+}

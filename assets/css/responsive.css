@@ -12,9 +12,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *:not(.breathing-circle),
-  *:not(.breathing-circle)::before,
-  *:not(.breathing-circle)::after {
+  *:not(.breathing-balloon),
+  *:not(.breathing-balloon)::before,
+  *:not(.breathing-balloon)::after {
     scroll-behavior: auto !important;
     transition: none !important;
     animation: none !important;
@@ -35,8 +35,16 @@
     grid-template-columns: 1fr;
   }
 
-  .hero-visual {
-    display: none;
+  .hero-mascot-area {
+    min-height: 240px;
+  }
+
+  .hero-mascot {
+    max-height: 240px;
+  }
+
+  .mascot-message {
+    right: 8%;
   }
 
   .module-grid,
@@ -108,6 +116,11 @@
     font-size: 2rem;
   }
 
+  .module-symbol {
+    width: 50px;
+    height: 50px;
+  }
+
   .card-arrow {
     display: none;
   }
@@ -138,11 +151,7 @@
     height: 65px;
   }
 
-  .motor-color-button {
-    min-height: 140px;
-  }
-
-  .memory-card {
+.memory-card {
     min-height: 115px;
   }
 

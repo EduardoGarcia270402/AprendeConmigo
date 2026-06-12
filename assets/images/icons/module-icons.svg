@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="low-vision" viewBox="0 0 120 120">
+    <path d="M12 60c12-23 29-35 48-35s36 12 48 35c-12 23-29 35-48 35S24 83 12 60z" fill="#fff" stroke="#17233c" stroke-width="8"/>
+    <circle cx="60" cy="60" r="22" fill="#7a65e8" stroke="#17233c" stroke-width="8"/>
+    <circle cx="60" cy="60" r="8" fill="#17233c"/>
+    <path d="M24 22l72 76" stroke="#ffb800" stroke-width="9" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="motor" viewBox="0 0 120 120">
+    <circle cx="54" cy="24" r="13" fill="#47a98b" stroke="#17233c" stroke-width="7"/>
+    <path d="M49 43l10 27h27M59 51h27M84 69l14 29" fill="none" stroke="#17233c" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="51" cy="78" r="28" fill="none" stroke="#17233c" stroke-width="8"/>
+    <path d="M51 50v28h31" fill="none" stroke="#47a98b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="tea" viewBox="0 0 120 120">
+    <path d="M59 60c-14-23-27-31-39-22-17 13-7 44 12 44 13 0 22-10 28-22 7-12 15-22 28-22 19 0 29 31 12 44-12 9-25 1-41-22z" fill="none" stroke="#4f6f68" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="26" cy="22" r="6" fill="#d8b86a"/>
+    <circle cx="60" cy="18" r="6" fill="#77a9a0"/>
+    <circle cx="94" cy="22" r="6" fill="#a68fc5"/>
+  </symbol>
+</svg>

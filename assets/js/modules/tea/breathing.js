@@ -16,8 +16,13 @@ export function renderTeaBreathing() {
       <h1>Vamos a respirar despacio</h1>
       <p id="breathing-counter">Preparados para ${preferences.breathingCycles} ciclos</p>
       <div class="breathing-stage">
-        <div class="breathing-circle" id="breathing-circle">
-          <strong id="breathing-message">Comenzar</strong>
+        <div class="balloon-wrap">
+          <div class="breathing-balloon" id="breathing-balloon">
+            <span class="balloon-shine" aria-hidden="true"></span>
+            <strong id="breathing-message">Comenzar</strong>
+          </div>
+          <span class="balloon-knot" aria-hidden="true"></span>
+          <span class="balloon-string" aria-hidden="true"></span>
         </div>
       </div>
       <button class="primary-button" id="start-breathing">Comenzar respiración</button>
@@ -35,26 +40,38 @@ export function renderTeaBreathing() {
 }
 
 async function runCycles(preferences) {
-  const circle = document.querySelector("#breathing-circle");
+  const balloon = document.querySelector("#breathing-balloon");
   const message = document.querySelector("#breathing-message");
   const counter = document.querySelector("#breathing-counter");
 
   for (let cycle = 1; cycle <= preferences.breathingCycles && !stopped; cycle += 1) {
     counter.textContent = `Ciclo ${cycle} de ${preferences.breathingCycles}`;
     message.textContent = "Inhala";
-    circle.className = "breathing-circle is-inhaling";
-    if (preferences.soundEnabled) speak("Inhala, uno, dos, tres", { volume: preferences.volume });
+    balloon.className = "breathing-balloon is-inhaling";
+    if (preferences.soundEnabled) {
+      speak("Inhala lentamente. Uno, dos, tres, cuatro", { volume: preferences.volume });
+    }
     await wait(4000);
     if (stopped) return;
 
+    message.textContent = "Mantén";
+    balloon.className = "breathing-balloon is-holding";
+    if (preferences.soundEnabled) {
+      speak("Mantén el aire. Uno, dos", { volume: preferences.volume });
+    }
+    await wait(2000);
+    if (stopped) return;
+
     message.textContent = "Exhala";
-    circle.className = "breathing-circle is-exhaling";
-    if (preferences.soundEnabled) speak("Exhala, uno, dos, tres", { volume: preferences.volume });
-    await wait(4000);
+    balloon.className = "breathing-balloon is-exhaling";
+    if (preferences.soundEnabled) {
+      speak("Exhala despacio. Uno, dos, tres, cuatro, cinco", { volume: preferences.volume });
+    }
+    await wait(5000);
   }
 
   if (stopped) return;
-  circle.className = "breathing-circle is-complete";
+  balloon.className = "breathing-balloon is-complete";
   message.textContent = "Muy bien";
   counter.textContent = "Terminaste la respiración";
   if (preferences.soundEnabled) speak("Muy bien. Terminaste la respiración.", { volume: preferences.volume });

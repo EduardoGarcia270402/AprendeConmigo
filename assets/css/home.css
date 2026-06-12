@@ -1,13 +1,15 @@
 ﻿.hero {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   min-height: 380px;
   padding: clamp(28px, 6vw, 72px);
   overflow: hidden;
   border: 4px solid var(--ink);
   border-radius: 38px;
-  background: #fff;
+  background:
+    radial-gradient(circle at 90% 12%, rgba(89, 50, 234, 0.1), transparent 18rem),
+    #fff;
   box-shadow: var(--shadow);
 }
 
@@ -16,51 +18,61 @@
   margin-bottom: 0;
 }
 
-.hero-visual {
+.hero-mascot-area {
   position: relative;
-  min-height: 260px;
-}
-
-.visual-circle,
-.visual-square,
-.visual-star {
-  position: absolute;
   display: grid;
-  place-items: center;
-  border: 5px solid var(--ink);
-  box-shadow: 8px 8px 0 var(--ink);
+  min-height: 300px;
+  place-items: end center;
 }
 
-.visual-circle {
-  top: 8%;
-  left: 10%;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background: #ff5b6f;
-}
-
-.visual-square {
-  right: 5%;
-  bottom: 4%;
-  width: 145px;
-  height: 145px;
-  border-radius: 28px;
-  background: #3c7dff;
-  transform: rotate(9deg);
-}
-
-.visual-star {
+.hero-mascot {
+  position: relative;
   z-index: 2;
-  right: 30%;
-  top: 31%;
-  width: 100px;
-  height: 100px;
-  color: var(--ink);
-  border-radius: 50%;
-  background: #ffd21c;
-  font-size: 3.5rem;
-  transform: rotate(-10deg);
+  display: block;
+  width: min(100%, 315px);
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.mascot-message {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  max-width: 180px;
+  padding: 12px 16px;
+  border: 3px solid var(--ink);
+  border-radius: 20px 20px 20px 4px;
+  background: #fff3b7;
+  font-weight: 900;
+  transform: rotate(2deg);
+}
+
+.hero-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hero-benefits span {
+  padding: 9px 13px;
+  color: var(--primary-dark);
+  border: 2px solid #c9bfff;
+  border-radius: 999px;
+  background: #f1edff;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.home-section-heading {
+  margin-top: 58px;
+  text-align: center;
+}
+
+.home-section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
 }
 
 .module-grid,
@@ -88,15 +100,13 @@
 
 .module-card:hover,
 .activity-card:hover,
-.visual-choice:hover,
-.motor-color-button:hover {
+.visual-choice:hover {
   transform: translateY(-5px);
 }
 
 .module-card:active,
 .activity-card:active,
-.visual-choice:active,
-.motor-color-button:active {
+.visual-choice:active {
   transform: translateY(4px);
   box-shadow: 0 4px 0 var(--ink);
 }
@@ -113,11 +123,6 @@
   background: #ded9c8;
 }
 
-.tea-card .module-icon {
-  font-size: 1.45rem;
-  letter-spacing: 0.04em;
-}
-
 .module-icon {
   display: grid;
   width: 82px;
@@ -127,6 +132,11 @@
   border-radius: 24px;
   background: #fff;
   font-size: 2.5rem;
+}
+
+.module-symbol {
+  width: 64px;
+  height: 64px;
 }
 
 .module-card small,

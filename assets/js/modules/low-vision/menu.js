@@ -1,5 +1,6 @@
 import { getActivityProgress } from "../../core/storage.js";
 import { setView } from "../../core/ui.js";
+import { moduleIcon } from "../shared/module-icons.js";
 
 export function renderLowVisionMenu() {
   const colorsProgress = getActivityProgress("vision-colors");
@@ -7,7 +8,7 @@ export function renderLowVisionMenu() {
 
   setView(
     `<section class="module-heading">
-      <div class="module-heading-icon" aria-hidden="true">◉</div>
+      <div class="module-heading-icon">${moduleIcon("low-vision")}</div>
       <div>
         <p class="eyebrow">Módulo de baja visión</p>
         <h1>Elige una actividad</h1>

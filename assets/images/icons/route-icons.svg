@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="lucas" viewBox="0 0 150 150">
+    <circle cx="68" cy="31" r="20" fill="#f2c7a5" stroke="#17233c" stroke-width="6"/>
+    <path d="M48 24c5-19 34-19 39 1" fill="none" stroke="#55372b" stroke-width="10" stroke-linecap="round"/>
+    <path d="M49 58h36v45H49z" fill="#46a77f" stroke="#17233c" stroke-width="6"/>
+    <path d="M55 67l-13 27M80 68l23 15" fill="none" stroke="#f2c7a5" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="54" cy="111" r="29" fill="#fff" stroke="#17233c" stroke-width="7"/>
+    <circle cx="54" cy="111" r="8" fill="#17233c"/>
+    <path d="M72 82v29h35M84 111l14 20" fill="none" stroke="#17233c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="park" viewBox="0 0 120 120">
+    <circle cx="61" cy="37" r="27" fill="#5bb36f" stroke="#17233c" stroke-width="6"/>
+    <circle cx="37" cy="47" r="20" fill="#65c67a" stroke="#17233c" stroke-width="6"/>
+    <circle cx="82" cy="50" r="20" fill="#4ca35f" stroke="#17233c" stroke-width="6"/>
+    <path d="M59 59v46" stroke="#875534" stroke-width="12"/>
+    <path d="M19 104h82" stroke="#17233c" stroke-width="7" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="school" viewBox="0 0 120 120">
+    <path d="M14 48l46-31 46 31v58H14z" fill="#f2c469" stroke="#17233c" stroke-width="7"/>
+    <path d="M48 106V70h24v36M26 60h14v14H26zm54 0h14v14H80z" fill="#8fc5dc" stroke="#17233c" stroke-width="6"/>
+    <path d="M60 17V5m0 0h23l-7 9 7 9H60" fill="#e85d64" stroke="#17233c" stroke-width="5"/>
+  </symbol>
+  <symbol id="library" viewBox="0 0 120 120">
+    <path d="M12 38h96L60 10zM18 96h84v14H18z" fill="#d7b7e8" stroke="#17233c" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M27 42v52m22-52v52m22-52v52m22-52v52" stroke="#17233c" stroke-width="8"/>
+  </symbol>
+  <symbol id="home" viewBox="0 0 120 120">
+    <path d="M12 56L60 14l48 42M22 50v58h76V50" fill="#f2d39a" stroke="#17233c" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M49 108V70h23v38M31 65h13v14H31z" fill="#8fc5dc" stroke="#17233c" stroke-width="6"/>
+  </symbol>
+  <symbol id="accessible" viewBox="0 0 120 120">
+    <path d="M12 91h25l36-45h35v45H12z" fill="#9fcdbd" stroke="#17233c" stroke-width="7" stroke-linejoin="round"/>
+    <circle cx="58" cy="29" r="10" fill="#287cba"/>
+    <path d="M55 43l7 24h24M62 51h19" fill="none" stroke="#287cba" stroke-width="8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="stairs" viewBox="0 0 120 120">
+    <path d="M12 100h24V78h24V56h24V34h24" fill="none" stroke="#d28b42" stroke-width="17" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="barrier" viewBox="0 0 120 120">
+    <path d="M25 42v64M95 42v64" stroke="#17233c" stroke-width="8"/>
+    <path d="M12 37h96v31H12z" fill="#fff" stroke="#17233c" stroke-width="7"/>
+    <path d="M18 65l25-25m8 25l25-25m8 25l20-20" stroke="#e55555" stroke-width="12"/>
+  </symbol>
+  <symbol id="hole" viewBox="0 0 120 120">
+    <ellipse cx="60" cy="69" rx="47" ry="25" fill="#17233c"/>
+    <path d="M18 56l12-20 15 14 16-25 17 25 15-12 10 20" fill="#8a6548" stroke="#17233c" stroke-width="6"/>
+  </symbol>
+  <symbol id="crosswalk" viewBox="0 0 120 120">
+    <path d="M8 25h104v70H8z" fill="#6e7d82" stroke="#17233c" stroke-width="7"/>
+    <path d="M19 35v50m21-50v50m21-50v50m21-50v50m21-50v50" stroke="#fff" stroke-width="11"/>
+  </symbol>
+</svg>

@@ -181,20 +181,6 @@
   min-height: 190px;
 }
 
-.motor-color-grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.motor-color-button {
-  min-height: 180px;
-  border: 6px solid var(--ink);
-  border-radius: 32px;
-  background: var(--choice-color);
-  box-shadow: 0 10px 0 var(--ink);
-  cursor: pointer;
-  transition: transform 160ms ease;
-}
-
 .memory-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

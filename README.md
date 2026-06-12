@@ -19,6 +19,7 @@ de datos ni proceso de compilación para funcionar en producción.
     │   ├── home.css           Pantalla principal
     │   ├── modules.css        Menús y tarjetas de módulos
     │   ├── activities.css     Juegos, progreso y resultados
+    │   ├── motor-routes.css   Escenarios accesibles de Lucas
     │   ├── tea.css            Comunicador, respiración y panel adulto
     │   └── responsive.css     Adaptación móvil y movimiento reducido
     ├── images
@@ -61,7 +62,7 @@ Abrir `http://localhost:8080`.
 2. Entrar a `public_html`.
 3. Subir el contenido de este repositorio, incluido `.htaccess`.
 4. Confirmar que `index.html` quede directamente dentro de `public_html`.
-5. Abrir el dominio y comprobar las cuatro actividades.
+5. Abrir el dominio y comprobar las seis actividades.
 
 No se debe subir la carpeta `.git`.
 

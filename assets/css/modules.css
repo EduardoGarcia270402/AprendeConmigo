@@ -28,6 +28,11 @@
   font-size: 3.5rem;
 }
 
+.module-heading-icon .module-symbol {
+  width: 88px;
+  height: 88px;
+}
+
 .activity-card {
   display: flex;
   min-height: 430px;

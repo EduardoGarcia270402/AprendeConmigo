@@ -1,8 +1,5 @@
 .tea-heading .module-heading-icon {
-  color: #fff;
   background: #4f6f68;
-  font-size: 1.7rem;
-  letter-spacing: 0.04em;
 }
 
 .adult-settings-link {
@@ -156,34 +153,85 @@
   background: #ebe8df;
 }
 
-.breathing-circle {
+.balloon-wrap {
+  position: relative;
   display: grid;
-  width: 190px;
-  height: 190px;
+  min-height: 340px;
   place-items: center;
-  border: 6px solid #294a44;
-  border-radius: 50%;
-  background: #a9c9c3;
+}
+
+.breathing-balloon {
+  position: relative;
+  display: grid;
+  z-index: 2;
+  width: 190px;
+  height: 220px;
+  place-items: center;
+  color: #fff;
+  border: 6px solid #173d75;
+  border-radius: 50% 50% 48% 48%;
+  background: linear-gradient(145deg, #59adff, #176bd0 75%);
+  box-shadow: inset -18px -14px 0 rgba(11, 58, 120, 0.22);
+  transform: scale(0.72);
+  transform-origin: center bottom;
   transition: transform 4s linear, background 500ms ease;
 }
 
-.breathing-circle strong {
+.breathing-balloon strong {
+  position: relative;
+  z-index: 2;
   font-size: 1.5rem;
+  text-shadow: 0 2px 0 #173d75;
 }
 
-.breathing-circle.is-inhaling {
-  background: #b9d7d2;
-  transform: scale(1.7);
+.balloon-shine {
+  position: absolute;
+  top: 34px;
+  left: 37px;
+  width: 38px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+  transform: rotate(25deg);
 }
 
-.breathing-circle.is-exhaling {
-  background: #d7dfd7;
-  transform: scale(0.82);
+.balloon-knot {
+  position: absolute;
+  z-index: 3;
+  bottom: 48px;
+  width: 25px;
+  height: 23px;
+  background: #176bd0;
+  border: 4px solid #173d75;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
 
-.breathing-circle.is-complete {
-  background: #c9ddb8;
-  transform: scale(1.15);
+.balloon-string {
+  position: absolute;
+  bottom: 0;
+  width: 3px;
+  height: 55px;
+  background: #6d7780;
+}
+
+.breathing-balloon.is-inhaling {
+  transform: scale(1.42);
+}
+
+.breathing-balloon.is-holding {
+  transform: scale(1.42);
+  transition-duration: 200ms;
+}
+
+.breathing-balloon.is-exhaling {
+  transform: scale(0.72);
+  transition-duration: 5s;
+}
+
+.breathing-balloon.is-complete {
+  background: linear-gradient(145deg, #83c7ff, #2780dc 75%);
+  transform: scale(1);
+  transition-duration: 500ms;
 }
 
 .breathing-screen > button {
@@ -293,14 +341,22 @@
     min-height: 360px;
   }
 
-  .breathing-circle {
-    width: 150px;
-    height: 150px;
+  .breathing-balloon {
+    width: 145px;
+    height: 175px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .breathing-circle {
+  .breathing-balloon {
     transition-duration: 4s !important;
+  }
+
+  .breathing-balloon.is-holding {
+    transition-duration: 200ms !important;
+  }
+
+  .breathing-balloon.is-exhaling {
+    transition-duration: 5s !important;
   }
 }

@@ -1,13 +1,14 @@
 import { getActivityProgress } from "../../core/storage.js";
 import { setView } from "../../core/ui.js";
+import { moduleIcon } from "../shared/module-icons.js";
 
 export function renderMotorMenu() {
-  const colorsProgress = getActivityProgress("motor-colors");
+  const routesProgress = getActivityProgress("motor-routes");
   const memoryProgress = getActivityProgress("motor-memory");
 
   setView(
     `<section class="module-heading">
-      <div class="module-heading-icon" aria-hidden="true">✋</div>
+      <div class="module-heading-icon">${moduleIcon("motor")}</div>
       <div>
         <p class="eyebrow">Módulo físico-motor</p>
         <h1>Elige una actividad</h1>
@@ -15,15 +16,15 @@ export function renderMotorMenu() {
       </div>
     </section>
     <section class="activity-grid">
-      <button class="activity-card" data-nav="/fisico-motora/colores">
+      <button class="activity-card" data-nav="/fisico-motora/rutas">
         <span class="activity-illustration">
-          <img src="assets/images/activities/motor-colors.jpg"
-            alt="Niño seleccionando un botón de color grande en una tableta" />
+          <img src="assets/images/activities/motor-routes.jpg"
+            alt="Lucas eligiendo una rampa accesible para llegar al parque" />
         </span>
         <span class="activity-number">Actividad 1</span>
-        <strong>Descubre el color</strong>
-        <span>Selecciona el color indicado</span>
-        <small>${colorsProgress.correct} respuestas correctas</small>
+        <strong>Ayuda a Lucas</strong>
+        <span>Elige la ruta accesible al destino</span>
+        <small>${routesProgress.correct} rutas correctas</small>
       </button>
       <button class="activity-card" data-nav="/fisico-motora/memoria">
         <span class="activity-illustration">
