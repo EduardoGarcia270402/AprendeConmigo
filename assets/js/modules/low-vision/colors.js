@@ -44,7 +44,7 @@ function renderRound() {
   setView(
     `${activityHeader({
       eyebrow: "Colores y objetos",
-      title: "Mira con atención",
+      title: "Presta atención",
       instruction,
       current: round + 1,
       total: totalRounds,
